@@ -91,15 +91,16 @@
 
         async function geojsonFetch() {
             const layers = [
-                '0-99',
-                '100-199',
-                '200-299',
-                '300-399',
-                '400-499',
-                '500-599',
-                '600-699',
-                '700 and more'
+                '700–899',
+                '900–1099',
+                '1100–1299',
+                '1300–1499',
+                '1500–1699',
+                '1700–1899',
+                '1900–1999',
+                '2000+'
             ];
+
             const colors = [
                 '#FFEDA070',
                 '#FED97670',
@@ -110,6 +111,7 @@
                 '#BD002670',
                 '#80002670'
             ];
+
 
             let response = await fetch('assets/wa-covid-data-102521.geojson');
             let covidData = await response.json();
@@ -129,19 +131,19 @@
                             'step',
                             ['get', 'casePer10k'],
                             '#FFEDA0',
-                            100,
-                            '#FED976',
-                            200,
-                            '#FEB24C',
                             300,
+                            '#FED976',
+                            1100,
+                            '#FEB24C',
+                            1300,
                             '#FD8D3C',
-                            400,
+                            1500,
                             '#FC4E2A',
-                            500,
+                            1700,
                             '#E31A1C',
-                            600,
+                            1900,
                             '#BD0026',
-                            700,
+                            2000,
                             '#800026'
                         ],
                         'fill-outline-color': '#BBBBBB',
